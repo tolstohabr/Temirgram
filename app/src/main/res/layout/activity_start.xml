@@ -12,7 +12,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:src="@drawable/logo"/>
+        app:srcCompat="@drawable/logo1"/>
 
     <Button
         android:layout_width="match_parent"
@@ -31,5 +31,4 @@
         android:layout_marginTop="15dp"
         android:textColor="@color/colorPrimary"
         android:background="@drawable/button_background"/>
-
 </LinearLayout>

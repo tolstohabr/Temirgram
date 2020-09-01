@@ -38,13 +38,21 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
+/*//было
         username.findViewById(R.id.username);
         fullname.findViewById(R.id.fullname);
         email.findViewById(R.id.email);
         password.findViewById(R.id.password);
         register.findViewById(R.id.register);
         txt_login.findViewById(R.id.txt_login);
+*/
+
+        username = findViewById(R.id.username);
+        fullname = findViewById(R.id.fullname);
+        email = findViewById(R.id.email);
+        password = findViewById(R.id.password);
+        register = findViewById(R.id.register);
+        txt_login = findViewById(R.id.txt_login);
 
         auth = FirebaseAuth.getInstance();
 
