@@ -49,7 +49,6 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
 
         final Notification notification = mNotification.get(i);
-
         viewHolder.text.setText(notification.getText());
 
         getUserInfo(viewHolder.image_profile, viewHolder.username, notification.getUserid());
@@ -108,9 +107,15 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 User user = dataSnapshot.getValue(User.class);
+                /* от заура
+                String url = user.getImageurl();
+                if (url != null && !url.isEmpty()) {
+                    Glide.with(mContext).load(url).into(imageView);
+                }
+                username.setText(user.getUsername());
+*/
                 Glide.with(mContext).load(user.getImageurl()).into(imageView);
                 username.setText(user.getUsername());
-
             }
 
             @Override
