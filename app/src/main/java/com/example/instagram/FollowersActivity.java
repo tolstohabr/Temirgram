@@ -1,14 +1,14 @@
 package com.example.instagram;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import androidx.appcompat.widget.Toolbar;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Toolbar;
 
 import com.example.instagram.Adapter.UserAdapter;
 import com.example.instagram.Model.User;
@@ -104,7 +104,6 @@ public class FollowersActivity extends AppCompatActivity {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()){
                     idList.add(snapshot.getKey());
                 }
-
                 showUsers();
             }
 
@@ -147,7 +146,6 @@ public class FollowersActivity extends AppCompatActivity {
                         if (user.getId().equals(id)){
                             userList.add(user);
                         }
-                        userList.add(user);
                     }
                 }
                 userAdapter.notifyDataSetChanged();
