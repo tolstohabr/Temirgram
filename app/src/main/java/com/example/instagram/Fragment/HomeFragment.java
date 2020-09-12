@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 
 import com.example.instagram.Adapter.PostAdapter;
 import com.example.instagram.Model.Post;
@@ -33,6 +34,8 @@ public class HomeFragment extends Fragment {
 
     private List<String> followingList;
 
+    ProgressBar progressBar;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -47,6 +50,8 @@ public class HomeFragment extends Fragment {
         postList = new ArrayList<>();
         postAdapter = new PostAdapter(getContext(), postList);
         recyclerView.setAdapter(postAdapter);
+
+        progressBar = view.findViewById(R.id.progress_circular);
 
         checkFollowing();
 
@@ -93,6 +98,7 @@ public class HomeFragment extends Fragment {
                 }
 
                 postAdapter.notifyDataSetChanged();
+                progressBar.setVisibility(View.GONE);
             }
 
             @Override
