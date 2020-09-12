@@ -34,6 +34,8 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
     private Context mContext;
     private List<User> mUsers;
+    private boolean isfragment;
+
 
     private FirebaseUser firebaseUser;
 
